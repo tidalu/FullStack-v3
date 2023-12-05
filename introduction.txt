@@ -1,0 +1,134 @@
+user interfaces -> browsers, mobile, cars, desktop, tv, appliancess
+
+servers -> APIs, logging, authentication, development platform, 
+
+database -< structures data storage , data analytics
+
+// popular stack 
+mean -> mongo, express, angular, node.js
+mern -> mongo, express, react, notejs
+lamp -> linux, apache, mysql, php
+
+
+// full stack is an engineer who can controll fronten and backend at both hand 
+
+->->->
+
+terminal -> fast -consistent -> low overhead
+
+// servers 
+/// what is a server? 
+-> A server is a computer program or device that provides a service to another computer program and its user, also known as the client
+-> make basic 
+
+
+
+// cloud computing
+-> Now, we can firm all that work out to companies andpeople that know what they're doing a lot better than we do.Companies like AWS, or DigitalOcean, or Rackspace, ora lot of cloud hosting providers.And that's all cloud computing is.It's just the idea that there's this massive pile of servers somewhere andwe can borrow some time from them or we can install our applications on that.
+
+virtualization: dividing a server resources into cirtual computers
+
+virtual machine -> digital version of physical computer 
+
+
+// vps _. virtual private server
+
+
+
+// operating systems
+
+user -> shell -> kernel -> hardware
+
+// ssh  and hashing
+
+-? security -> username/passwd 
+            -> biometric
+            -> ssh key                                                                                                                                                                                                
+
+        openssl md5 {file to hash}
+        openssl sha1 {file to hash}
+        openssl sha256 {file to hash}
+
+        https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+
+
+        salt
+        salted hash
+
+            [input] + [salt] + [hashFunction] = [salted hash]
+            [./foo] + [salt] + [sha1] = [   ??   ]
+
+
+eliptical curve cryptography
+// https://www.pingidentity.com/en/resources/blog/post/encryption-vs-hashing-vs-salting.html
+
+// sha256 or something more complex would be better than md5
+
+// supply chain security
+
+
+What is ransomware?>> Software that gets maliciously installed on in a computersystem that encrypts all the data on that system.
+
+
+
+// ssh -> secure socket shell
+
+
+                -> public key
+ssh key pair ->>
+                -> private key
+
+
+                There's the public part, which is something I can share out to anybody.I can share, give you my public key, post it on the Internet,post it on Twitter, it doesn't really matter, it's a public key.Then you have your private key, the private key is known only to me.The public key is used to encrypt any sort of data, any sort of message you want.And I think of it as a hashing function, or as the Psalter hashing function.But the great thing is, anybody can encrypt this message and send it to me,but I'm the only one that can decrypt it.Now, think how powerful that is.I can send a message in broad open, I can shout it from the streets, andno one will know what I'm saying other than me,because I'm the only one who can decrypt that
+
+
+// cd ~/.ssh 
+// ssh-keygen 
+
+
+
+-> .ssh$ ls | grep fsfe 
+fsfe <-------private key
+fsfe.pub <------- public key  
+
+
+///
+fsfe is just project name, it can be anything like you set that
+
+setup ssh key for logging
+
+ssh into your server 
+``` ssh root@<you_IP> ```
+
+ssh into your server your private key
+``` ssh -i ~/.ssh/fsfe root@<you_IP>
+
+exiting your server
+``` exit ```
+
+
+
+// one more time 
+
+move to .ssh directory 
+ -> ssh-keygen -> give name later 
+
+
+
+
+ // make sure keychain is active 
+    vi ~/.ssh/config  -> if it does not exist, jst create 
+
+// make sure 
+
+``` Host*
+     AddKeysToAgent yes
+     UseKeychain yes 
+```
+
+these above should be yes
+
+
+// add private key to keychain
+    ssh-add --apple-use-keychain fsfe
+
