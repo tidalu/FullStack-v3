@@ -132,3 +132,317 @@ these above should be yes
 // add private key to keychain
     ssh-add --apple-use-keychain fsfe
 
+
+
+
+/// how internet works
+
+ the internet is nuilt on cooperation and rules
+
+ the very simplified diagram of how requests work
+
+ computer 
+    |
+    |                               server
+    ▽                                 ^  
+network card                           |
+    |                                  |
+    |                             load balancer 
+    ▽                                 ^
+  router                               |
+    |                                  |
+    |                             server cluster 
+    ▽
+   ISP                                 ^
+    |                                  |
+    |                                  |                                        
+    ▽                                  
+  Tier 1 ISP ———→  Tier 1 ISP   ———→ Datacenter
+
+  what is router!!!!
+
+
+  terminology 
+
+  internet -> a network of networks
+  intranet - private network
+  LAN -> local area network 
+  WAN -> wide are network
+
+
+
+
+
+IP -> internet protocol
+IP address -> numeric label assigned to an internet connected device 
+
+  IPv4              ipv6 
+  8.8.8.8         2001:4860:4860:8888
+
+
+network tool : ping 
+
+
+check the status of a network host 
+    ping google.com
+
+
+follow the path of your request 
+    traceroute google.com
+
+show network status 
+    netstat -lt | less
+
+
+
+//terms
+
+TCP -> transmission control protocol
+UDP -> user diagram protocol
+ICMP -> internet control message protocol
+
+Packet -> unit of data transmitted over a network 
+
+
+// well TCp is alway gonna be most reliable connection 
+TCp has what is called handshake 
+
+
+// https://www.cloudflare.com/learning/ddos/glossary/user-datagram-protocol-udp/
+
+
+
+// DNS and URLs 
+
+How the domains work ?
+
+DNS -> domain name systems
+Nameserver -> hold DNS records to translate domain names into ip addresses
+
+
+// DNS recors 
+
+A record -> maps name to Ip addresses 
+CNAME -> maps name to name 
+
+
+Lookuo the Nameserver for a domain  
+    nslookup frontendmasters.com
+
+lookup the dns records for a domain
+    dig frontendmasters.com
+
+
+viev browser DNS cache 
+
+chrome -> chrome://net-internals/#dns
+firefox -> about:networking#dns 
+
+
+// why one domain name could have multiple IP adresses ?
+cuz it means they are hosted on different servers
+
+
+
+//// Anatomy of a URLs
+URL -> uniform resource locator
+
+
+blog.yourdomain.com/en/fullstack?test=true     |
+|     subdomain    |    path    |queryParameter|
+               |tld|
+    |    domain    |
+
+
+tld -> top level domain
+
+
+
+// brand new server 
+
+- update server 
+- restart your server 
+- create a new user 
+- make that user a superuser
+- enable login for new user 
+- disable root login#
+
+
+
+updating and restaring 
+
+apt update
+apt upgrade
+shutdown now -r 
+
+root -> highest permission level, allows unrestricted access to the OS 
+sudo -> super user do, Allows to run commands and programs as root
+
+
+create a new user 
+    adduser <your_username>
+
+add user to 'sudo' group
+    usermod -aG sudo <your_username>
+
+switch user
+    su <your_username>
+
+check sudo access 
+    sudo cat /var/log/auth.log
+
+create authorized_keys file 
+    ~/.ssh/authorized_keys
+
+paste your public key
+
+exit
+
+Log with new user 
+
+
+
+//// web servers
+
+Apache, Nginx
+
+
+// Nginx  -> wev server, reverse proxy, forward proxy 
+
+
+
+install nginx 
+    sudo apt install nginx
+
+start nginx 
+    sudo service nginx start
+
+navigate to your browser with your api 
+
+
+
+
+// node js 
+
+link to newest node.js source 
+    curl https://deb.nodesource.com/setup_19.x | sudo -E bash -
+
+install  node.js
+    sudo apt-get install nodejs
+
+
+install git 
+    sudo apt install git 
+
+Application setup 
+
+    Establlish application file system
+    enable version control
+    Create a node.js server
+
+
+
+
+Change ownership if /www
+    sudo chown -R $USER:$USER /var/www
+
+make an application directory
+    mkdir /var/www/app
+
+initialize empty git repo in /app
+    git init
+
+
+create app file
+    touch app.js
+
+initialize project 
+    npm init
+
+
+create a basic node server in app.js
+
+start your application
+
+
+basic node server :
+
+    const http = require("http");
+
+    http.createServer (function (req, res) {
+
+    res.write("On the way to being a full stack engineer!");
+    res.end();
+
+    }).1listen(3000);
+
+    console.log("Server started on port 3000");
+
+
+Proxy pass 
+    location / {
+        proxy_pass URl_TO_PROXY_TO;
+    }
+
+
+    create a new nginx server and proxy 
+        sudo vi /etc.nginx/sites-enabled/<name>
+
+
+
+        server {
+
+                listen 80 default_server;
+                listen [::]:80 default_server;
+
+                root /var/www/html;
+                index index.html;
+
+                server_name <your_domain>;
+
+                location / {
+                    proxy_pass http://138.68.95.204/
+                }
+        }
+
+
+    Point nginx to new server 
+    sudo vi /etc/nginx/nginx.config
+
+        ##
+        # Virtual Host Configs
+        ##
+
+        include /etc/nginx/conf.d/*. conf;
+        include /etc/nginx/sites-enabled/fsfe;
+
+
+
+
+// istall PM2[is gonna help out node application up and running even if we close the shell or even if wwe close the exit the terminal]
+
+    install PM2 
+        sudo npm i -g pm2 
+
+    start PM2 
+        pm2 start app.js -watch
+
+    setup auto restart
+        pm save 
+
+
+
+Git 
+
+    create a git repository 
+    create an ssh key called gh_key
+    add the ssh key to github
+    add remote repo
+    ensure new ssh key is used 
+    push local repo to github
+
+Version control -> record changes to a file system to preserve history 
+
+git, 
+subVersion
+mercurial
