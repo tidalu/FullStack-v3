@@ -720,3 +720,12 @@ contigious integration & deployment
         .restart nginx
 
 
+
+
+websockets overview 
+
+websocket - persistent bidirectional connection between client and server 
+
+    ... -> update nginx configuration
+    ... -> create a new nodejs server 
+    ... -> enable websockets
