@@ -654,4 +654,41 @@ contigious integration & deployment
     >> -> append 
     <  -> read fro stdin 
     2>&1  -> redirect both stdin and stdout 
+
+
+
+
+    find / grep
+
+    find -> search file Names
+
+    grep -> search file contents 
+
+      
+
+      $ find     /bar    -name    foo.txt
+      | find | directory| option | file/holder
+
     
+
+    find all log files in /var/log
+        find /var/log -type f -name "*.log"
+
+    find all dirs with the name log 
+        find / -type d -name log
+
+
+    sudo !! -> rerun the last command with sudo perm 
+
+
+    Grep -> 
+
+    $ grep    -i      "tidalu"     8/var/www
+    | grep | options | search exp | directory 
+
+
+    $ zgrep file  -> search inside zgrep file 
+
+
+    find running node processes
+        ps aux | grep node
