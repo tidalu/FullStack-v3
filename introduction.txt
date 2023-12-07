@@ -708,4 +708,15 @@ contigious integration & deployment
 
     /etx/nginx/nginx.conf
 
-    
+
+
+    subdomains 
+
+        .create a subdomain called "blog"
+           . create an A records
+           . create a Server
+
+        .update nginx.conf
+        .restart nginx
+
+
