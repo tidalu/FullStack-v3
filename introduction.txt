@@ -461,3 +461,11 @@ two factor authentication
 vpn
 
 
+
+
+port - communication enpoint that  maps to specific process or network service
+
+
+
+see well known parts 
+    less /etc/service
