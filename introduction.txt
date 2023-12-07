@@ -521,3 +521,28 @@ firewalls
     
     enable firewall 
         sudo ufw enable
+
+
+    how would we create a ufw rule to block all http connections?
+
+
+
+
+permission
+
+    owner  group   everyone 
+                     else 
+
+     rwx    rwx       rwx 
+     421    421       421
+      7      7         7
+
+
+     read      4
+     write     2
+     execute   1
+
+
+    https://quickref.me/chmod
+
+
