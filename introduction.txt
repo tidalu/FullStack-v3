@@ -614,3 +614,44 @@ contigious integration & deployment
 
 
     crontab.guru
+
+
+
+
+    Logging  , streams, redirections
+
+
+    /var/log/     
+                syslog
+                auth.log
+                nginx/access.log
+
+
+    tail - last part of a file 
+    head - first part of the file 
+    less - output one page  at time 
+    cat - output entire file
+
+
+    tail -f -> follow the output of the file 
+
+
+    standard streams :
+        standard ouput 
+            stout 
+
+        standard input 
+            stdin 
+
+        standard error
+            sderr
+
+    
+
+
+    | -> read from stdout 
+    > -> overwrites
+    >> -> append 
+    <  -> read fro stdin 
+    2>&1  -> redirect both stdin and stdout 
+    
