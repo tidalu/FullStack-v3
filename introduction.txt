@@ -687,8 +687,25 @@ contigious integration & deployment
     | grep | options | search exp | directory 
 
 
-    $ zgrep file  -> search inside zgrep file 
+    $ zgrep file  -> search inside gzip file 
 
 
     find running node processes
         ps aux | grep node
+
+
+
+    nginx 
+
+
+    // how to do redirectio in nginx 
+        location /help {
+            return 301 https://developer.mozilla.org/en-US/;
+        }
+
+
+    Gzip 
+
+    /etx/nginx/nginx.conf
+
+    
