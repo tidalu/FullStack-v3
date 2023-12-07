@@ -546,3 +546,20 @@ permission
     https://quickref.me/chmod
 
 
+
+
+unattended upgrades
+
+    uplication updates
+
+
+    install unattended upgrades
+        sudo apt install unattended-uprgrades
+
+    enable upgrades 
+        sudo dpkg-reconfigure --priority=low unattended-upgrades
+
+
+
+term -> LTS -> long term support
+
