@@ -469,3 +469,55 @@ port - communication enpoint that  maps to specific process or network service
 
 see well known parts 
     less /etc/service
+
+
+// nmap
+
+install nmap 
+    sudo apt install nmap 
+
+run nmap 
+    nmap <your server api>
+
+extra service/version information
+    nmap -sV <your sever api>
+
+
+
+    if we run nmap with api adresses
+    , there is port 3000(node) is open but it should not be , 
+
+
+
+
+
+
+firewalls
+
+--- a network security device that monitors incoming and outgoing network traffic and decides whether to alow or blokc specific traffic based on a defined set of security rules 
+
+
+
+-> ufw
+------- uncomplicated firewall
+
+
+              http
+              https  
+   $ ufw allow ssh 
+        deny
+        reject 
+
+    
+
+     check firewall status
+        sudo ufw status
+    
+    allow ssh 
+        sudo ufw allow ssh 
+    
+    allow http 
+        sudo ufw allow http
+    
+    enable firewall 
+        sudo ufw enable
