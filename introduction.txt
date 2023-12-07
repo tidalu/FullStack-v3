@@ -581,3 +581,36 @@ contigious integration & deployment
         https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment
 
         https://spinnaker.io/
+
+
+
+    Cron for CI
+
+        cron -> executes commands on a schedule 
+            0 10 * * 1-5 sh ./myscriptt.sh
+            ```run ./myscriptt.js at 10:00 on every day of week from monday through friday 
+
+
+
+    1.create a bashscript that git pulls from main branch 
+
+    2.create a cron jonb to execute script every 2 minutes
+
+    
+
+
+    * * * * * sh /path/to/script 
+
+    first * : minutes
+    second* : hour
+    third * : month
+    fourth * : day 
+    fifth * : day 
+    sh : use bash
+
+
+    show cronjobs
+        crontab -e
+
+
+    crontab.guru
