@@ -563,3 +563,21 @@ unattended upgrades
 
 term -> LTS -> long term support
 
+
+
+
+
+contigious integration & deployment 
+
+    CI/CD 
+
+        continuous integration - code changes are validated and merged back into main branch  as often as possible 
+
+        continuous delivery - code changes are automatically built and ready for production
+
+        continuous deployment - builds are automatically deployed to production environments
+
+
+        https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment
+
+        https://spinnaker.io/
