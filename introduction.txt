@@ -446,3 +446,18 @@ Version control -> record changes to a file system to preserve history
 git, 
 subVersion
 mercurial
+
+
+//
+
+
+hwat could someone do if they gained root access to your server
+
+
+ssh
+firewalls
+updates
+two factor authentication
+vpn
+
+
