@@ -729,3 +729,41 @@ websocket - persistent bidirectional connection between client and server
     ... -> update nginx configuration
     ... -> create a new nodejs server 
     ... -> enable websockets
+
+
+
+
+
+
+databases
+
+?? why not saving everything in one file, and take tehm whenever you need, 
+this is not good, cuz we would need that everything in another server but we cannot have an access a file laying in another server, so at this time, databases comes comes to help 
+
+
+
+sql
+tables
+relateed data 
+scrict structures
+
+
+relational ratabases 
+    mysql
+    sqlite
+    postgresql
+    microsoft sql Server
+
+
+non relational databases
+    redis 
+    elastic 
+    mongo db 
+    cassarna 
+
+
+
+
+    SQL - structured query language
+
+        
