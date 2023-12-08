@@ -768,4 +768,47 @@ non relational databases
 
 
 
-        
+SQL lite 
+
+
+
+
+
+HTTP 
+headers
+status codes
+https
+certificates
+http/*
+
+
+
+http ->  hypertext transport protocol 
+
+request -> -< res
+
+common headers 
+    user-agent -> the requesting device type 
+    accept - . what the device will handle
+    accept-language -> browser language 
+    content-type -> the type of media
+    set-cookie ->  set stateful information 
+    X-    -> typically use for custom headers 
+
+     
+
+     200 - OK
+     301 - moved permamently 
+     302 - found (temporary direct)
+     401 - not authorized 
+     500 - internal server error
+
+
+     1xx - information
+     2xx - success
+     3xx - redirect 
+     4xx - client error
+     5xx - server errror
+
+
+     certbot -> free https      
