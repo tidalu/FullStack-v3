@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        
+        {
+            "name": "Docker Node.js Launch",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "platform": "node",
+            "node": {
+                "package": "${workspaceFolder}/workshop-vs-code-can-do-that/exercise-5-docker/start/package.json",
+                "localRoot": "${workspaceFolder}/workshop-vs-code-can-do-that/exercise-5-docker/start"
+            }
+        }
+    ]
+}

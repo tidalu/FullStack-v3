@@ -21,7 +21,7 @@ Open File Switcher - Cmd/Ctrl + P
 Toggle Integrated Terminal - Cmd/Ctrl + `
 Open Settings - Cmd/Ctrl + ,
  
-
+  
 activity bar 
 side bar 
 

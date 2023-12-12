@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  expressreactstarter:
+    image: expressreactstarter
+    build:
+      context: workshop-vs-code-can-do-that/exercise-5-docker/start
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+    links: 
+      - mongo
+
+
+mongo : 
+    image: 'mongo'
